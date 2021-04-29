@@ -105,7 +105,7 @@ export async function transformFileImports(
   {baseExt, contents}: SnowpackSourceFile<string>,
   replaceImport: (specifier: string) => string,
 ) {
-  if (baseExt === '.js') {
+  if (baseExt === '.js' || baseExt === '.ts') {
     return transformEsmImports(contents, replaceImport);
   }
   if (baseExt === '.html') {

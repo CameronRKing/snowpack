@@ -21,6 +21,7 @@ function getLoader(filePath: string): 'js' | 'jsx' | 'ts' | 'tsx' {
 }
 
 export function esbuildPlugin(config: SnowpackConfig, {input}: {input: string[]}): SnowpackPlugin {
+  console.log('esbuilt', input);
   return {
     name: '@snowpack/plugin-esbuild',
     resolve: {
