@@ -306,7 +306,7 @@ function loadPlugins(
   });
 
   // add internal JS handler plugin
-  plugins.push(execPluginFactory(esbuildPlugin, {input: ['.mjs', '.jsx', '.ts', '.tsx']}));
+  plugins.push(execPluginFactory(esbuildPlugin, {input: ['.mjs', '.jsx', '.tsx']}));
 
   const extensionMap = plugins.reduce((map, {resolve}) => {
     if (resolve) {
